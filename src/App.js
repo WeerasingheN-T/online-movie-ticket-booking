@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React,{useState} from "react";
 import './App.css';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { ProductionRegister,ProductionLogin,UpdateProductionTeam,ViewProduction,Movies,AddMovie,ViewMovie,ViewMovies,EditMovie,ViewTheMovie,ViewTheMovies,TicketHeader,TicketFooter} from "./ProductionTeam";
 
 function App() {
+
+  const [productionTeam,setLoginTeam] = useState({});
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router> 
+        <TicketHeader/>
+    
+        <Switch>
+        <Route path="/" exact component={() => <Movies/>} />  
+        <Route path="/ProductionRegister" exact component={() => <ProductionRegister/>} />
+        <Route path="/ProductionLogin"><ProductionLogin setLoginTeam={setLoginTeam}/></Route>
+        <Route path="/UpdateProductionTeam/:email" exact component={() => <UpdateProductionTeam/>} />
+        <Route path="/ViewProduction/:email"><ViewProduction/></Route>
+        <Route path="/AddMovie" exact component={() => <AddMovie/>} />
+        <Route path="/ViewMovie" exact component={() => <ViewMovie/>} />
+        <Route path="/ViewMovies" exact component={() => <ViewMovies/>} />
+        <Route path="/EditMovie/:id" exact component={() => <EditMovie/>} />
+        <Route path="/ViewTheMovie/:id" exact component={() => <ViewTheMovie/>} />
+        <Route path="/ViewTheMovies/:id" exact component={() => <ViewTheMovies/>} />
+          </Switch>
+          <TicketFooter/>
+          </Router>
     </div>
   );
 }
