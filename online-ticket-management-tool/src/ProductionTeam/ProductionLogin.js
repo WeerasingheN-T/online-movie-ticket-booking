@@ -1,7 +1,7 @@
 import React,{useState} from 'react'
 import './ProductionLogin.css';
 import axios from 'axios';
-import {useHistory,Redirect} from "react-router-dom";
+import {useNavigate,Navigate} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import viewFi from '../ProductionTeamTools/EFi1.jpg';
 
@@ -10,7 +10,7 @@ function ProductionLogin ({setLoginTeam}) {
   const [email,setEmail]=useState("");
   const [password,setPassword]=useState("");
 
-    const history = useHistory();
+    const history = useNavigate();
   
     function login (e) {
 
@@ -22,7 +22,7 @@ function ProductionLogin ({setLoginTeam}) {
 
         if(res.status===200){
          history.push(`/ViewProduction/${email}`);
-         return <Redirect to={`/ViewProduction/${email}`} /> 
+         return <Navigate to={`/ViewProduction/${email}`} /> 
         }
 
       }).catch((err)=>{

@@ -3,7 +3,7 @@ import './AddMovie.css';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Row, Col } from 'react-bootstrap';
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import { useParams } from 'react-router-dom';
 import AddFi from '../ProductionTeamTools/AddFi.png';
 import EditFi from '../ProductionTeamTools/EditFi1.png';
@@ -18,7 +18,7 @@ function ViewTheMovie() {
   var res;
   var res1;
 
-  const histoy = useHistory();
+  const histoy = useNavigate();
 
   useEffect(() => {
 

@@ -1,13 +1,13 @@
 import React,{useState}from 'react';
 import './AddMovie.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {useHistory} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import axios from 'axios';
 import {Row,Col} from 'react-bootstrap';
 
 const AddMovie=() =>{
 
-  const history = useHistory();
+  const history = useNavigate();
 
   const [newMovie,setNewMovie]=useState(
     {

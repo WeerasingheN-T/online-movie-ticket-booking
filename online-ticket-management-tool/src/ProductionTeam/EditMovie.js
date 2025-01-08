@@ -1,6 +1,6 @@
 import React,{useState,useEffect,useCallback} from 'react';
 import './AddMovie.css';
-import {useHistory} from "react-router";
+import {useNavigate} from "react-router";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col} from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
@@ -19,7 +19,7 @@ function EditMovie() {
     dates:'',
 });
 
-const histoy=useHistory();
+const histoy=useNavigate();
 
 const setTeam=(e)=>{
   console.log(e.target.value);
