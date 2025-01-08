@@ -1,7 +1,5 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useCallback} from 'react';
 import './PRegister.css';
-import axios from 'axios';
-import {useHistory} from "react-router";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col} from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
@@ -19,8 +17,6 @@ function UpdateProductionTeam() {
       ConfirmPassword:'',
   });
   
-  const histoy=useHistory();
-  
   const setTeam=(e)=>{
     console.log(e.target.value);
     const {name,value}=e.target;
@@ -32,16 +28,16 @@ function UpdateProductionTeam() {
     })
   }
   
-  const getTeam=async()=>{
-
-    const res=await fetch(`http://localhost:8073/team/get/${email}`,{
+  const getTeam = useCallback(() => {
+    
+    const res=fetch(`http://localhost:8073/team/get/${email}`,{
       method:"GET",
       headers:{
       "Content-Type":"application/json", 
       }
     });
   
-    const data=await res.json();
+    const data=res.json();
     console.log(data);
   
     if(res.status===500||!data){
@@ -55,13 +51,12 @@ function UpdateProductionTeam() {
       setupdateTeam(res1[1]);
       console.log(res1[1]);
     }
-  
-  }
+  }, [email]);
   
   useEffect(()=>{
   
     getTeam();
-  },[]);
+  },[getTeam]);
   
   const updateTeams=async(e)=>{
 

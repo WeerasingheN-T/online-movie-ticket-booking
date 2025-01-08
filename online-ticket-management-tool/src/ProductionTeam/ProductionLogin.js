@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react'
+import React,{useState} from 'react'
 import './ProductionLogin.css';
 import axios from 'axios';
 import {useHistory,Redirect} from "react-router-dom";
@@ -43,7 +43,7 @@ function ProductionLogin ({setLoginTeam}) {
             <div className="card card1 p-3">
               
                 <div className="d-flex flex-column">             
-                <img src="https://i.imgur.com/kFFNY1q.png" height="50" width="50" />
+                <img src="https://i.imgur.com/kFFNY1q.png" height="50" width="50" alt='Login1' />
                 <span className="login mt-3">Log in</span> </div>
             <form onSubmit={login}>
 
@@ -66,7 +66,7 @@ function ProductionLogin ({setLoginTeam}) {
         <div className="col-md-5 mt-8">
             <div className="card card2 p-3">
                 <div className="image">
-                    <img width="400" height="440" src={viewFi}/>
+                    <img width="400" height="440" src={viewFi} alt='card1'/>
                 </div>
                  </div>
         </div>

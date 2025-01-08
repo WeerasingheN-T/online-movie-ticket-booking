@@ -23,7 +23,7 @@ const ProductionRegister=()=> {
 
   const sendTeamMember=(e)=>{
 
-    if(newTeam.password!=newTeam.ConfirmPassword){
+    if(newTeam.password!==newTeam.ConfirmPassword){
     alert("Password and confirm password are not equal")
   }
 

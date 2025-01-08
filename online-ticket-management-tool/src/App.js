@@ -17,7 +17,7 @@ function App() {
         <Route path="/ProductionRegister" exact component={() => <ProductionRegister/>} />
         <Route path="/ProductionLogin"><ProductionLogin setLoginTeam={setLoginTeam}/></Route>
         <Route path="/UpdateProductionTeam/:email" exact component={() => <UpdateProductionTeam/>} />
-        <Route path="/ViewProduction/:email"><ViewProduction/></Route>
+        <Route path="/ViewProduction/:email"><ViewProduction productionTeam={productionTeam} /></Route>
         <Route path="/AddMovie" exact component={() => <AddMovie/>} />
         <Route path="/ViewMovie" exact component={() => <ViewMovie/>} />
         <Route path="/ViewMovies" exact component={() => <ViewMovies/>} />

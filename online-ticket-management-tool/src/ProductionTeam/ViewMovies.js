@@ -21,27 +21,6 @@ function ViewMovies() {
 
         },[]);
 
-        const deleteMovie=async(_id)=>{
-          const res2=await fetch(`http://localhost:8073/movie/delete/${_id}`,{
-
-          method:"DELETE",
-          headers:{
-            "Content-Type":"application/json"
-          }
-          });
-
-          const deleteData=await res2.json();
-          console.log(deleteData);
-
-          if(res2.status===500||deleteData){
-            console.log("error");
-          }
-
-          else{
-            alert("Movie deleted");
-          }
-        }
-
         var viewItems_HTMLTABLE="";
 
     if(movieList){
@@ -55,7 +34,7 @@ function ViewMovies() {
           <Col className="Tabletd">{data.theater}</Col>
           <Col className="Tabletd">{data.dates}</Col>
           <Col className="Tabletd">{data.time}</Col>
-          <Col className="Tabletd"><a href={`./ViewTheMovies/${data._id}`}><img width="200" height="240" src={require(`../Photo/${data.imageFile}`)}/></a></Col>
+          <Col className="Tabletd"><a href={`./ViewTheMovies/${data._id}`}><img width="200" height="240" src={require(`../Photo/${data.imageFile}`)} alt='image2'/></a></Col>
           </Row>
 
         );

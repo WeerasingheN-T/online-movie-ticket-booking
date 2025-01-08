@@ -4,8 +4,6 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col} from 'react-bootstrap';
 import { useParams} from 'react-router-dom';
-import ViewMovie from './ViewMovie';
-import { data } from 'autoprefixer';
 
 function ViewTheMovies() {
 
@@ -27,7 +25,7 @@ function ViewTheMovies() {
       }
       getMovies();
 
-       },[]);
+       },[id]);
 
        var viewItems_HTMLTABLE="";
 
@@ -48,7 +46,7 @@ function ViewTheMovies() {
           <div key={data._id} className="card4 m-2" >
       <div className="row g-0">
     <div className="col-md-4">
-      <img width="342" height="460" src={require(`../Photo/${data.imageFile}`)} />
+      <img width="342" height="460" src={require(`../Photo/${data.imageFile}`)} alt='image9'/>
     </div>
     <div className="col-md-8">
       <div className="card-body">

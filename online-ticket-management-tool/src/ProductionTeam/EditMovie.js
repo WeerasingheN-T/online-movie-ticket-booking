@@ -1,6 +1,5 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState,useEffect,useCallback} from 'react';
 import './AddMovie.css';
-import axios from 'axios';
 import {useHistory} from "react-router";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col} from 'react-bootstrap';
@@ -33,16 +32,16 @@ const setTeam=(e)=>{
   })
 }
 
-const getTeam=async()=>{
-
-  const res=await fetch(`http://localhost:8073/movie/get/${id}`,{
+const getTeam = useCallback(() => {
+  
+  const res=fetch(`http://localhost:8073/movie/get/${id}`,{
     method:"GET",
     headers:{
     "Content-Type":"application/json", 
     }
   });
 
-  const data=await res.json();
+  const data=res.json();
   console.log(data);
 
   if(res.status===500||!data){
@@ -57,12 +56,12 @@ const getTeam=async()=>{
     console.log(res1[1]);
   }
 
-}
+}, [id]);
 
 useEffect(()=>{
 
   getTeam();
-},[]);
+},[getTeam]);
 
 const updateTeam=async(e)=>{
   e.preventDefault();

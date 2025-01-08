@@ -31,7 +31,7 @@ function ViewTheMovie() {
       }
       getTeams();
 
-       },[]);
+       },[email]);
 
        const deleteMovie=async(_id)=>{
       const res2=await fetch(`http://localhost:8073/team/delete/${_id}`,{
@@ -80,7 +80,7 @@ function ViewTheMovie() {
 
         <div className="col-md-8">
       <Row>
-        <Col><img className="rounded-circle" width="200" height="200" src={require(`../Photos/${data.imageFiles}`)} /></Col>
+        <Col><img className="rounded-circle" width="200" height="200" src={require(`../Photos/${data.imageFiles}`)} alt='image4'/></Col>
       <Col>
       <Row>
       <Col> <p className="text-center h2 fw-bold mb-3 mx-1 mx-md-3 mt-6">{data.firstName}&emsp;{data.lastName}</p></Col>
@@ -136,7 +136,7 @@ return (
 
 <div className="card-group m-2">
   <div className="card">
-  <center><img width="200" height="200" src={AddFi} /></center>
+  <center><img width="200" height="200" src={AddFi} alt='image5'/></center>
     <div className="card-body">
       <h2 className="card-title">Add Movies</h2>
       <p className="card-text">Add new showing movies under the different theaters into the movie collections.</p>
@@ -144,7 +144,7 @@ return (
     </div>
   </div>
   <div className="card">
-    <center><img width="200" height="200" src={viewFi}/></center>
+    <center><img width="200" height="200" src={viewFi} alt='image6'/></center>
     <div className="card-body">
       <h2 className="card-title">View Movies</h2>
       <p className="card-text">There are the showing movies under different theaters</p>
@@ -152,11 +152,11 @@ return (
     </div>
   </div>
   <div className="card">
-    <center><img width="300" height="240" src={EditFi} /></center>
+    <center><img width="300" height="240" src={EditFi} alt='image7'/></center>
     <div className="card-body">
       <h2 className="card-title">View Theaters</h2>
       <p className="card-text">There are the registered theaters and their details.</p>
-      <a href="#" className="btn btn-secondary">View Theaters</a>
+      <a href="/ViewMovie" className="btn btn-secondary">View Theaters</a>
     </div>
   </div>
  </div>

@@ -24,25 +24,25 @@ return (
 <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
 <div className="carousel-inner">
 <div className="carousel-item active">
-<img src={Mov1} className="d-block" />
+<img src={Mov1} className="d-block" alt='movie1'/>
 </div>
 <div className="carousel-item">
-<img src={Mov2} className="d-block " />
+<img src={Mov2} className="d-block" alt='movie2' />
 </div>
 <div className="carousel-item">
-<img src={Mov3} className="d-block " />
+<img src={Mov3} className="d-block" alt='movie3' />
 </div>
 <div className="carousel-item">
-<img src={Mov4} className="d-block " />
+<img src={Mov4} className="d-block" alt='movie4' />
 </div>
 <div className="carousel-item">
-<img src={Mov5} className="d-block " />
+<img src={Mov5} className="d-block" alt='movie5' />
 </div>
 <div className="carousel-item">
-<img src={Mov6} className="d-block " />
+<img src={Mov6} className="d-block" alt='movie6' />
 </div>
 <div className="carousel-item">
-<img src={Mov7} className="d-block " />
+<img src={Mov7} className="d-block" alt='movie7' />
 </div>
 </div>
 <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -62,7 +62,7 @@ return (
 
 <div className="card-group m-2">
   <div className="card">
-    <img src={Mov8} />
+    <img src={Mov8} alt='movie8'/>
     <div className="card-body">
       <h2 className="card-title">SCREAM</h2>
       <p className="card-text">Directed by Radio Slience.Movie is showed from March 22 at Cinema Halls.</p>
@@ -70,7 +70,7 @@ return (
     </div>
   </div>
   <div className="card">
-    <img src={Mov9} />
+    <img src={Mov9} alt='movie9'/>
     <div className="card-body">
       <h2 className="card-title">SHANG-CHI</h2>
       <p class="card-text">Directed by Destin Daniel Cretton.Movie is showed from March 20 at Cinema Halls.</p>
@@ -78,15 +78,15 @@ return (
     </div>
   </div>
   <div className="card">
-    <img src={Mov20} />
+    <img src={Mov20} alt='movie20'/>
     <div className="card-body">
       <h2 className="card-title">SEYRAA</h2>
       <p className="card-text">Directed by Surender Rebby.Movie is showed from March 23 at Cinema Halls.</p>
-      <a href='' className="btn btn-secondary">View Movie</a>
+      <a href='./ViewTheMovies/627b4f6e94ce09588ea8cd93' className="btn btn-secondary">View Movie</a>
     </div>
    </div>
     <div className="card">
-    <img src={Mov14} />
+    <img src={Mov14} alt='movie14'/>
     <div className="card-body">
       <h2 className="card-title">NIGHT of the SICARIO</h2>
       <p className="card-text">Directed by Joth Riggs.Movie is showed from March 20 at Cinema Halls.</p>
@@ -96,7 +96,7 @@ return (
   </div>
   <div className="card-group m-2">
     <div className="card">
-    <img src={Mov19} />
+    <img src={Mov19} alt='movie19'/>
     <div className="card-body">
       <h2 className="card-title">THE BATMAN</h2>
       <p className="card-text">Directed by Matt Reeves.Movie is showed from March 4 at Cinema Halls.</p>
@@ -104,7 +104,7 @@ return (
     </div>
    </div>
     <div className="card">
-    <img src={Mov16} />
+    <img src={Mov16} alt='movie16'/>
     <div className="card-body">
       <h2 className="card-title">FANTASTIC 4</h2>
       <p className="card-text">Created by Jack Kirby.Movie is showed from March 8 at Cinema Halls.</p>
@@ -112,7 +112,7 @@ return (
     </div>
    </div>
     <div className="card">
-    <img src={Mov17} />
+    <img src={Mov17} alt='movie17'/>
     <div className="card-body">
       <h2 className="card-title">Mountains</h2>
       <p className="card-text">This is a photo of snowy-covered mountains. How majestic.</p>
@@ -120,11 +120,11 @@ return (
       </div>
      </div>
       <div className="card">
-    <img src={Mov18} />
+    <img src={Mov18} alt='movie18'/>
     <div className="card-body">
       <h2 className="card-title">REMINISCENCE</h2>
       <p className="card-text">Directed by Lisa Joy.Movie is showed from March 4 at Cinema Halls.</p>
-      <a href="#" className="btn btn-secondary">View Movie</a>
+      <a href='./ViewTheMovies/627b4f6e94ce09588ea8cd93' className="btn btn-secondary">View Movie</a>
     </div>
    </div>
     </div>

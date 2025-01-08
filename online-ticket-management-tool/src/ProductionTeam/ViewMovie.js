@@ -55,7 +55,7 @@ function ViewMovie() {
           <Col className="Tabletd">{data.theater}</Col>
           <Col className="Tabletd">{data.dates}</Col>
           <Col className="Tabletd">{data.time}</Col>
-          <Col className="Tabletd"><a href={`./ViewTheMovie/${data._id}`}><img width="200" height="240" src={require(`../Photo/${data.imageFile}`)}/></a></Col>
+          <Col className="Tabletd"><a href={`./ViewTheMovie/${data._id}`}><img width="200" height="240" src={require(`../Photo/${data.imageFile}`)} alt='image1'/></a></Col>
           <Col><button className="btnn1" onClick={()=>deleteMovie(data._id)}>Delete</button><a href={`./ViewTheMovie/${data._id}`}><button className="btnn1" >View</button></a></Col>
           </Row>
 
